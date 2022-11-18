@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/online_store.iml" filepath="$PROJECT_DIR$/.idea/online_store.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../react-dz-2/.idea/react-dz-2.iml" filepath="$PROJECT_DIR$/../react-dz-2/.idea/react-dz-2.iml" />
+      <module fileurl="file://$USER_HOME$/Downloads/Магазин/.idea/Магазин.iml" filepath="$USER_HOME$/Downloads/Магазин/.idea/Магазин.iml" />
     </modules>
   </component>
 </project>

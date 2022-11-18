@@ -1,6 +1,7 @@
 import React from 'react'
 import {Button, Card, Col, Row} from 'react-bootstrap'
 import './ProductCard.css'
+import {Link} from 'react-router-dom'
 
 const ProductCard = ({product}) => {
 
@@ -22,20 +23,33 @@ const ProductCard = ({product}) => {
     return result
   }
 
-  const rating = <Row className="rating-stars">{ratingToHTML(product?.rating)}</Row>
+  const getPriceWithDiscount = (price, discountPercentage) => Math.round(price - (price * discountPercentage / 100))
+
+  const rating = <div className="stars-rating">{ratingToHTML(product?.rating)}</div>
 
   return (
-    <Card style={{ width: '17rem' }}>
-      <Card.Img className='img-products' variant="top" src={product?.thumbnail} />
+    <div className='product-card'>
+      <Link to={`/product/${product.id}`}>
+        <img className='img-products' variant="top" src={product?.thumbnail}/>
+      </Link>
       <Card.Body>
-        <div className='card-body'>
-          <Card.Title>{product?.title}</Card.Title>
+        <div className='card_body card-body-title'>
+          <Link to={`/product/${product.id}`} className='product-link'>
+            <div className='card-title'>{product?.title}</div>
+          </Link>
           <div>{rating}</div>
-          <div className='price-product'>${product?.price}</div>
         </div>
-        <div><Button variant="primary">Add to cart</Button></div>
+        <div className='card-body-price'>
+          <div className='price_product'>
+            <div className='text-muted'>${product?.price}</div>
+            <div className='price-product'>${getPriceWithDiscount(product?.price, product?.discountPercentage)}</div>
+          </div>
+          <div>
+            <button type="button" className="btn btn-primary">Add to cart</button>
+          </div>
+        </div>
       </Card.Body>
-    </Card>
+    </div>
   )
 }
 
