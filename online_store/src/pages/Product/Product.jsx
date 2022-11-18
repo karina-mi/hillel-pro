@@ -5,12 +5,14 @@ import Footer from '../../components/Footer/Footer'
 import Header from '../../components/Header/Header'
 import './Product.css'
 import Spinner from 'react-bootstrap/Spinner'
-import {useGetProductQuery} from '../../services/shop'
+import {useGetProductQuery, useGetRelatedProductsQuery} from '../../services/shop'
 import {rating, getPriceWithDiscount} from '../../components/common'
+import ProductCard from '../../components/ProductCard/ProductCard'
 
 const Product = () => {
   const {id} = useParams()
   const {data: product, isLoading} = useGetProductQuery(id)
+  const {data: related} = useGetRelatedProductsQuery({id: product?.id, category: product?.category})
 
   const spinner = <div className='louder-product'>
     <Spinner className='spinner_border' animation="border" variant="danger" />
@@ -39,6 +41,15 @@ const Product = () => {
           </div>
         </div>
       )}
+      <div>
+        <div className='row-products'>
+          {related?.map(product => {
+            return (
+              <ProductCard product={product} key={product.id}/>
+            )
+          })}
+        </div>
+      </div>
       <Footer/>
     </div>
   )

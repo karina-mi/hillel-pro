@@ -8,13 +8,17 @@
     box-shadow: -1px 20px 42px -7px rgb(0 0 0 / 52%) inset;
 
 }
+
+.related-products {
+    display: flex;
+
+}
 .background-products {
     box-shadow: 1px 9px 42px 12px rgb(0 0 0 / 52%);
     color: #ff000085;
     text-align: end;
     padding: 5px 100px;
     margin: 0;
-
 }
 
 .bi-unity{

@@ -33,10 +33,19 @@ export const shopApi = createApi({
     }),
     getProduct: builder.query({
       query: id => `products/${id}`
+    }),
+    getRelatedProducts: builder.query({
+      query: arg => `products/category/${arg.category}`,
+      transformResponse(baseQueryReturnValue, meta, arg) {
+        return baseQueryReturnValue.products
+          .sort((a, b) => b.rating - a.rating)
+          .filter(item => item.id !== arg.id)
+          .slice(0, 3)
+      }
     })
   }),
 })
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const { useGetSmartphonesQuery, useGetLaptopsQuery, useGetProductsQuery, useGetProductQuery } = shopApi
+export const { useGetRelatedProductsQuery, useGetSmartphonesQuery, useGetLaptopsQuery, useGetProductsQuery, useGetProductQuery } = shopApi
