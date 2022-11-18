@@ -3,8 +3,11 @@ import {Card, Col} from 'react-bootstrap'
 import './ProductCard.css'
 import {Link} from 'react-router-dom'
 import {rating, getPriceWithDiscount} from '../common'
+import {useDispatch} from 'react-redux'
+import {addToCart} from '../../redux/cartSlice'
 
 const ProductCard = ({product}) => {
+  const dispatch = useDispatch()
 
   return (
     <div className='product-card'>
@@ -24,7 +27,8 @@ const ProductCard = ({product}) => {
             <div className='price-product'>${getPriceWithDiscount(product?.price, product?.discountPercentage)}</div>
           </div>
           <div>
-            <button type="button" className="btn btn-primary">Add to cart</button>
+            <button type="button" className="btn btn-primary"
+            onClick={() => dispatch(addToCart(product))}>Add to cart</button>
           </div>
         </div>
       </Card.Body>

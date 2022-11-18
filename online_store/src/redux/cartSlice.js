@@ -7,9 +7,13 @@ const cartSlice = createSlice({
   },
   reducers: {
     addToCart: (state, action) => {
-      const itemInCart = state.cart.find((item) => item.id === action.payload.id);
+      const itemInCart = state.items.find((item) => item.id === action.payload.id);
       if (itemInCart) {
-        itemInCart.quantity++;
+        if (itemInCart.quantity < action.payload.stock) {
+          itemInCart.quantity++;
+        } else {
+          console.error('ITEM IS NOT AVAILABLE ANYMORE')
+        }
       } else {
         state.items.push({ ...action.payload, quantity: 1 });
       }

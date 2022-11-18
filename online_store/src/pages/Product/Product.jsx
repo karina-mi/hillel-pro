@@ -8,11 +8,15 @@ import Spinner from 'react-bootstrap/Spinner'
 import {useGetProductQuery, useGetRelatedProductsQuery} from '../../services/shop'
 import {rating, getPriceWithDiscount} from '../../components/common'
 import ProductCard from '../../components/ProductCard/ProductCard'
+import {useDispatch} from 'react-redux'
+import {addToCart} from '../../redux/cartSlice'
 
 const Product = () => {
   const {id} = useParams()
   const {data: product, isLoading} = useGetProductQuery(id)
   const {data: related} = useGetRelatedProductsQuery({id: product?.id, category: product?.category})
+
+  const dispatch = useDispatch()
 
   const spinner = <div className='louder-product'>
     <Spinner className='spinner_border' animation="border" variant="danger" />
@@ -35,7 +39,11 @@ const Product = () => {
               <div className='product-price'>${product?.price}</div>
               <div className='product-discount'>${getPriceWithDiscount(product?.price, product?.discountPercentage)}</div>
               <div>
-                <Button className='product-button' variant="primary">Add to cart</Button>
+                <Button
+                  className='product-button'
+                  variant="primary"
+                  onClick={() => dispatch(addToCart(product))}
+                >Add to cart</Button>
               </div>
             </div>
           </div>
