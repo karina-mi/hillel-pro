@@ -8,8 +8,8 @@ import Spinner from 'react-bootstrap/Spinner'
 import {useGetProductsQuery} from '../../services/shop'
 
 
-const Products = (props) => {
-  const {data, isLoading} = useGetProductsQuery()
+const Products = ({title, query}) => {
+  const {data, isLoading} = query()
 
   const spinner = <div className="louder-product">
     <Spinner className="spinner_border" animation="border" variant="danger"/>
@@ -18,7 +18,7 @@ const Products = (props) => {
   return (
     <div className="products">
       <Header/>
-      <h1 className="background-products">Products<i className="bi bi-unity"></i></h1>
+      <h1 className="background-products">{title}<i className="bi bi-unity"></i></h1>
       {isLoading ? spinner : (
         <div className="row-products">
           {data?.map(product => {

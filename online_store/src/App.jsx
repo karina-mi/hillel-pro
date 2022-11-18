@@ -5,9 +5,7 @@ import Home from './pages/Home/Home'
 import About from './pages/About/About'
 import Products from './pages/Products/Products'
 import Product from './pages/Product/Product'
-import Footer from './components/Footer/Footer'
-import Laptops from './pages/Laptops/Laptops'
-import Smartphones from './pages/Smartphones/Smartphones'
+import {useGetProductsQuery, useGetLaptopsQuery, useGetSmartphonesQuery} from './services/shop'
 
 
 const App = () => {
@@ -16,14 +14,14 @@ const App = () => {
     <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/about' element={<About/>}/>
-      <Route path='/products/'>
+      <Route path='/products/' element={<Products title='Products' query={useGetProductsQuery}/>}>
           <Route index element={<Products/>} />
       </Route>
       <Route path='/product/'>
         <Route path=':id' element={<Product/>} />
       </Route>
-      <Route path='/laptops/' element={<Laptops/>}/>
-      <Route path='/smartphones/' element={<Smartphones/>}/>
+      <Route path='/laptops/' element={<Products title='Laptops' query={useGetLaptopsQuery}/>}/>
+      <Route path='/smartphones/' element={<Products title='Smartphones' query={useGetSmartphonesQuery}/>}/>
     </Routes>
   )
 }
