@@ -21,30 +21,23 @@ const Header = () => {
   return <div>
     <Navbar bg="#2b2b2b" expand="lg">
     <Container>
-      <Navbar.Brand href="products"> <Link className='logo' to={'/'}>
+      <Navbar.Brand as={Link} to={'/'}>
         <i className="bi bi-unity logo-header"></i>
-      </Link>{' '}
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
           <Nav.Link as={Link} to='/'>Home</Nav.Link>
           <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-            <NavDropdown.Item>
-              <Nav.Link as={Link} to='/'>
+            <NavDropdown.Item as={Link} to='/'>
                 All Products
-              </Nav.Link>
             </NavDropdown.Item>
             <NavDropdown.Divider />
-            <NavDropdown.Item>
-              <Nav.Link as={Link} to='/smartphones'>
-                Smartphones
-              </Nav.Link>
+            <NavDropdown.Item as={Link} to='/smartphones'>
+              Smartphones
             </NavDropdown.Item>
-            <NavDropdown.Item>
-              <Nav.Link as={Link} to='/laptops'>
+            <NavDropdown.Item as={Link} to='/laptops'>
                 Laptops
-              </Nav.Link>
             </NavDropdown.Item>
           </NavDropdown>
         </Nav>

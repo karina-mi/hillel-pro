@@ -9,7 +9,7 @@ import {useGetProductsQuery} from '../../services/shop'
 
 
 const Products = ({title, query}) => {
-  const {data, isLoading} = query()
+  const {data, isLoading} = query({skip: false})
   const spinner = <div className="louder-product">
     <Spinner className="spinner_border" animation="border" variant="danger"/>
   </div>
