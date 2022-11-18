@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d2bc6dee-7990-4989-bb20-ca205264a81b" name="Changes" comment="Added products to rtk.">
+    <list default="true" id="d2bc6dee-7990-4989-bb20-ca205264a81b" name="Changes" comment="Combined multiple pages into one.">
       <change beforePath="$PROJECT_DIR$/../front-end-pro" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end-pro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Products/Products.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Products/Products.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Products/Products.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Products/Products.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProductCard/ProductCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductCard/ProductCard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/shop.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +83,7 @@
       <updated>1667475103996</updated>
       <workItem from="1667475105241" duration="50420000" />
       <workItem from="1667997411695" duration="40000" />
-      <workItem from="1668505763361" duration="43362000" />
+      <workItem from="1668505763361" duration="43572000" />
     </task>
     <task id="LOCAL-00001" summary="Added first version.">
       <created>1668758529107</created>
@@ -136,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668763317640</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Combined multiple pages into one.">
+      <created>1668763586977</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1668763586977</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,6 +164,7 @@
     <MESSAGE value="Fixed warning." />
     <MESSAGE value="Added rtk for laptops." />
     <MESSAGE value="Added products to rtk." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added products to rtk." />
+    <MESSAGE value="Combined multiple pages into one." />
+    <option name="LAST_COMMIT_MESSAGE" value="Combined multiple pages into one." />
   </component>
 </project>

@@ -9,13 +9,13 @@ export const shopApi = createApi({
     getSmartphones: builder.query({
       query: (name) => `products/category/smartphones`,
       transformResponse(baseQueryReturnValue, meta, arg) {
-        return baseQueryReturnValue.products.sort((a, b) => b.rating - a.rating).slice(0, 10)
+        return baseQueryReturnValue.products.sort((a, b) => b.rating - a.rating).slice(0, 9)
       }
     }),
     getLaptops: builder.query({
       query: (name) => `products/category/laptops`,
       transformResponse(baseQueryReturnValue, meta, arg) {
-        return baseQueryReturnValue.products.sort((a, b) => b.rating - a.rating).slice(0, 10)
+        return baseQueryReturnValue.products.sort((a, b) => b.rating - a.rating).slice(0, 9)
       }
     }),
     getProducts: builder.query({
@@ -28,7 +28,7 @@ export const shopApi = createApi({
           result = result.concat(data.products)
         })
 
-        return {data: result.sort((a, b) => b.rating - a.rating).slice(0, 10)}
+        return {data: result.sort((a, b) => b.rating - a.rating).slice(0, 9)}
       },
     })
   }),
