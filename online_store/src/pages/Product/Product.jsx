@@ -1,47 +1,16 @@
-import React, {useEffect, useState} from 'react'
-import {Link, useParams} from 'react-router-dom'
-import {Button, Col, Row} from 'react-bootstrap'
+import React from 'react'
+import {useParams} from 'react-router-dom'
+import {Button} from 'react-bootstrap'
 import Footer from '../../components/Footer/Footer'
 import Header from '../../components/Header/Header'
 import './Product.css'
 import Spinner from 'react-bootstrap/Spinner'
-import ProductCard from '../../components/ProductCard/ProductCard'
+import {useGetProductQuery} from '../../services/shop'
+import {rating, getPriceWithDiscount} from '../../components/common'
 
 const Product = () => {
-  const [product, setProduct] = useState(null)
-  const [loading, setLoading] = useState(false);
   const {id} = useParams()
-
-  const ratingToHTML = rating => {
-    const result = []
-    for (let i = 0; i <= 4; i++) {
-      const starDifference = rating - i
-      if (starDifference > 1) {
-        result.push(<div className="bi-star-fill"/>)
-      } else if (starDifference < 1 && starDifference > 0.5) {
-        result.push(<div className="bi-star-half"/>)
-      } else if (starDifference <= 0.5) {
-        result.push(<div className="bi bi-star"/>)
-      }
-    }
-    return result
-  }
-  const rating = <div className="stars-rating">{ratingToHTML(product?.rating)}</div>
-  console.log(product)
-
-  const getPriceWithDiscount = (price, discountPercentage) => Math.round(price - (price * discountPercentage / 100))
-
-  const fetchProduct = async () => {
-    const response = await fetch(`https://dummyjson.com/products/${id}`)
-    const data = await response.json()
-    setLoading(false);
-    setProduct(data)
-  }
-
-  useEffect(() => {
-    setLoading(true);
-    fetchProduct()
-  }, [])
+  const {data: product, isLoading} = useGetProductQuery(id)
 
   const spinner = <div className='louder-product'>
     <Spinner className='spinner_border' animation="border" variant="danger" />
@@ -51,7 +20,7 @@ const Product = () => {
     <div>
       <Header/>
       <h1 className="background-products">Product<i className="bi bi-unity"></i></h1>
-      { loading ? spinner : (
+      { isLoading ? spinner : (
         <div className='product-body'>
           <img className='product-img' src={product?.thumbnail}/>
           <div className='description-product'>
@@ -59,7 +28,7 @@ const Product = () => {
               <h1 className='product-title'>{product?.title}</h1>
             </div>
             <div className='product_description'>{product?.description}</div>
-            <div>{rating}</div>
+            <div>{rating(product)}</div>
             <div className='product-price-body'>
               <div className='product-price'>${product?.price}</div>
               <div className='product-discount'>${getPriceWithDiscount(product?.price, product?.discountPercentage)}</div>
@@ -72,7 +41,6 @@ const Product = () => {
       )}
       <Footer/>
     </div>
-
   )
 }
 

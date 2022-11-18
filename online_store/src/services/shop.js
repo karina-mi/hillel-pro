@@ -30,10 +30,13 @@ export const shopApi = createApi({
 
         return {data: result.sort((a, b) => b.rating - a.rating).slice(0, 9)}
       },
+    }),
+    getProduct: builder.query({
+      query: id => `products/${id}`
     })
   }),
 })
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const { useGetSmartphonesQuery, useGetLaptopsQuery, useGetProductsQuery } = shopApi
+export const { useGetSmartphonesQuery, useGetLaptopsQuery, useGetProductsQuery, useGetProductQuery } = shopApi

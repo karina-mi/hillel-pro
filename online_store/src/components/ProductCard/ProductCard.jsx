@@ -2,28 +2,9 @@ import React from 'react'
 import {Card, Col} from 'react-bootstrap'
 import './ProductCard.css'
 import {Link} from 'react-router-dom'
-import {v4} from 'uuid'
+import {rating, getPriceWithDiscount} from '../common'
 
 const ProductCard = ({product}) => {
-
-  const ratingToHTML = rating => {
-    const result = []
-    for (let i = 0; i <= 4; i++) {
-      const starDifference = rating - i
-      if (starDifference > 1) {
-        result.push(<Col className="bi-star-fill" key={v4()}/>)
-      } else if (starDifference < 1 && starDifference > 0.5) {
-        result.push(<Col className="bi-star-half" key={v4()}/>)
-      } else if (starDifference <= 0.5) {
-        result.push(<Col className="bi bi-star" key={v4()}/>)
-      }
-    }
-    return result
-  }
-
-  const getPriceWithDiscount = (price, discountPercentage) => Math.round(price - (price * discountPercentage / 100))
-
-  const rating = <div className="stars-rating">{ratingToHTML(product?.rating)}</div>
 
   return (
     <div className='product-card'>
@@ -35,7 +16,7 @@ const ProductCard = ({product}) => {
           <Link to={`/product/${product.id}`} className='product-link'>
             <div className='card-title'>{product?.title}</div>
           </Link>
-          <div>{rating}</div>
+          <div>{rating(product)}</div>
         </div>
         <div className='card-body-price'>`
           <div className='price_product'>
