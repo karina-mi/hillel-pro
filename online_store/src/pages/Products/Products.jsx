@@ -5,40 +5,11 @@ import ProductCard from '../../components/ProductCard/ProductCard'
 import Footer from '../../components/Footer/Footer'
 import Header from '../../components/Header/Header'
 import Spinner from 'react-bootstrap/Spinner'
+import {useGetProductsQuery} from '../../services/shop'
 
 
 const Products = (props) => {
-
-  const [products, setProducts] = useState([])
-  const [loading, setLoading] = useState(false)
-
-  const getData = async url => {
-    const response = await fetch(url)
-    return await response.json()
-  }
-
-  const fetchProducts = async () => {
-    setLoading(true)
-    let result = []
-    const requests = []
-    const urls = [
-      'https://dummyjson.com/products/category/smartphones',
-      'https://dummyjson.com/products/category/laptops',
-    ]
-    urls.forEach(url => requests.push(getData(url)))
-    const responsesData = await Promise.all(requests)
-    responsesData.forEach(({products}) => {
-      result = result.concat(products)
-    })
-
-    const sortedProducts = result.sort((a, b) => b.rating - a.rating)
-    setProducts(sortedProducts.slice(0, 10))
-    setLoading(false)
-  }
-
-  useEffect(() => {
-    fetchProducts()
-  }, [])
+  const {data, isLoading} = useGetProductsQuery()
 
   const spinner = <div className="louder-product">
     <Spinner className="spinner_border" animation="border" variant="danger"/>
@@ -48,9 +19,9 @@ const Products = (props) => {
     <div className="products">
       <Header/>
       <h1 className="background-products">Products<i className="bi bi-unity"></i></h1>
-      {loading ? spinner : (
+      {isLoading ? spinner : (
         <div className="row-products">
-          {products?.map(product => {
+          {data?.map(product => {
             return (
               <ProductCard product={product} key={product.id}/>
             )

@@ -20,7 +20,7 @@ const Smartphones = () => {
       <h1 className="background-products">Smartphones<i className="bi bi-unity"></i></h1>
       { isLoading ? spinner : (
         <div className='row-products'>
-          {data?.products?.map(smartphone => {
+          {data?.map(smartphone => {
             return (
               <ProductCard product={smartphone} key={smartphone.id}/>
             )

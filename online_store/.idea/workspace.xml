@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d2bc6dee-7990-4989-bb20-ca205264a81b" name="Changes" comment="Fixed warning.">
+    <list default="true" id="d2bc6dee-7990-4989-bb20-ca205264a81b" name="Changes" comment="Added rtk for laptops.">
       <change beforePath="$PROJECT_DIR$/../front-end-pro" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end-pro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Laptops/Laptops.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Laptops/Laptops.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Products/Products.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Products/Products.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Smartphones/Smartphones.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Smartphones/Smartphones.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/shop.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +86,7 @@
       <updated>1667475103996</updated>
       <workItem from="1667475105241" duration="50420000" />
       <workItem from="1667997411695" duration="40000" />
-      <workItem from="1668505763361" duration="41332000" />
+      <workItem from="1668505763361" duration="43147000" />
     </task>
     <task id="LOCAL-00001" summary="Added first version.">
       <created>1668758529107</created>
@@ -121,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668761250482</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added rtk for laptops.">
+      <created>1668761617645</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1668761617645</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +151,7 @@
     <MESSAGE value="Added first version." />
     <MESSAGE value="Added rtk query for smartphones + renames." />
     <MESSAGE value="Fixed warning." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed warning." />
+    <MESSAGE value="Added rtk for laptops." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added rtk for laptops." />
   </component>
 </project>
