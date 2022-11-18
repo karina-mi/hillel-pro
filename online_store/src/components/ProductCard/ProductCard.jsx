@@ -2,22 +2,20 @@ import React from 'react'
 import {Button, Card, Col, Row} from 'react-bootstrap'
 import './ProductCard.css'
 import {Link} from 'react-router-dom'
+import {v4} from 'uuid'
 
 const ProductCard = ({product}) => {
-
-  const onClick = () => {
-  }
 
   const ratingToHTML = rating => {
     const result = []
     for (let i = 0; i <= 4; i++) {
       const starDifference = rating - i
       if (starDifference > 1) {
-        result.push(<Col className="bi-star-fill"/>)
+        result.push(<Col className="bi-star-fill" key={v4()}/>)
       } else if (starDifference < 1 && starDifference > 0.5) {
-        result.push(<Col className="bi-star-half"/>)
+        result.push(<Col className="bi-star-half" key={v4()}/>)
       } else if (starDifference <= 0.5) {
-        result.push(<Col className="bi bi-star"/>)
+        result.push(<Col className="bi bi-star" key={v4()}/>)
       }
     }
     return result
@@ -39,7 +37,7 @@ const ProductCard = ({product}) => {
           </Link>
           <div>{rating}</div>
         </div>
-        <div className='card-body-price'>
+        <div className='card-body-price'>`
           <div className='price_product'>
             <div className='text-muted'>${product?.price}</div>
             <div className='price-product'>${getPriceWithDiscount(product?.price, product?.discountPercentage)}</div>
@@ -49,7 +47,7 @@ const ProductCard = ({product}) => {
           </div>
         </div>
       </Card.Body>
-    </div>
+     </div>
   )
 }
 
