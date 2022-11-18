@@ -3,36 +3,20 @@ import Header from '../../components/Header/Header'
 import ProductCard from '../../components/ProductCard/ProductCard'
 import Footer from '../../components/Footer/Footer'
 import Spinner from 'react-bootstrap/Spinner'
+import {useSelector} from 'react-redux'
 
 const Cart = () => {
-  const [laptops, setLaptops] = useState(null)
-  const [loading, setLoading] = useState(false);
-
-  const fetchProduct = async () => {
-    const response = await fetch(`https://dummyjson.com/products/category/laptops`)
-    const data = await response.json()
-    setLaptops(data.products)
-    setLoading(false);
-  }
-
-  useEffect(() => {
-    setLoading(true);
-    fetchProduct()
-  }, [])
-
-  const spinner = <div className='louder-product'>
-    <Spinner className='spinner_border' animation="border" variant="danger" />
-  </div>
+  const cart = useSelector((state) => state.cart.items)
 
   return (
     <div className='products'>
       <Header/>
-      <h1 className="background-products">Laptops<i className="bi bi-unity"></i></h1>
-      { loading ? spinner : (
+      <h1 className="background-products">Cart<i className="bi bi-unity"></i></h1>
         <div className='row-products'>
-          {laptops?.map(laptop => {
+          {cart?.map(product => {
+            console.log(product)
             return (
-              <ProductCard product={laptop} key={laptop.id}/>
+              <ProductCard product={product} key={product.id} removable={true}/>
             )
           })}
         </div>
