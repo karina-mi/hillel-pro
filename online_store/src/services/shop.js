@@ -9,9 +9,12 @@ export const shopApi = createApi({
     getSmartphones: builder.query({
       query: (name) => `products/category/smartphones`,
     }),
+    getLaptops: builder.query({
+      query: (name) => `products/category/laptops`
+    })
   }),
 })
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const { useGetSmartphonesQuery } = shopApi
+export const { useGetSmartphonesQuery, useGetLaptopsQuery } = shopApi

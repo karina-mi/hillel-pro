@@ -3,22 +3,10 @@ import Header from '../../components/Header/Header'
 import ProductCard from '../../components/ProductCard/ProductCard'
 import Footer from '../../components/Footer/Footer'
 import Spinner from 'react-bootstrap/Spinner'
+import {useGetLaptopsQuery, useGetSmartphonesQuery} from '../../services/shop'
 
 const Laptops = () => {
-  const [laptops, setLaptops] = useState(null)
-  const [loading, setLoading] = useState(false);
-
-  const fetchProduct = async () => {
-    const response = await fetch(`https://dummyjson.com/products/category/laptops`)
-    const data = await response.json()
-    setLaptops(data.products)
-    setLoading(false);
-  }
-
-  useEffect(() => {
-    setLoading(true);
-    fetchProduct()
-  }, [])
+  const {data, isLoading} = useGetLaptopsQuery()
 
   const spinner = <div className='louder-product'>
     <Spinner className='spinner_border' animation="border" variant="danger" />
@@ -28,22 +16,15 @@ const Laptops = () => {
     <div className='products'>
       <Header/>
       <h1 className="background-products">Laptops<i className="bi bi-unity"></i></h1>
-      { loading ? spinner : (
+      { isLoading ? spinner : (
         <div className='row-products'>
-          {laptops?.map(laptop => {
+          {data?.products?.map(laptop => {
             return (
               <ProductCard product={laptop} key={laptop.id}/>
             )
           })}
         </div>
       )}
-      <div className='row-products'>
-        {laptops?.map(laptop => {
-          return (
-            <ProductCard product={laptop} key={laptop.id}/>
-          )
-        })}
-      </div>
       <Footer/>
     </div>
   )
