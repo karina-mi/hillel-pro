@@ -5,8 +5,18 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import {Link} from 'react-router-dom'
+import { useSelector } from 'react-redux';
 
 const Header = () => {
+  const cart = useSelector((state) => state.cart.items)
+
+  const getTotalQuantity = () => {
+    let total = 0
+    cart.forEach(item => {
+      total += item.quantity
+    })
+    return total
+  }
 
   return <div>
     <Navbar bg="#2b2b2b" expand="lg">
@@ -31,7 +41,10 @@ const Header = () => {
           </NavDropdown>
         </Nav>
       </Navbar.Collapse>
-      <Link to={'/cart'}><i className="bi bi-cart-check"></i></Link>
+      <Link to={'/cart'}>
+        {getTotalQuantity()}
+        <i className="bi bi-cart-check"></i>
+      </Link>
     </Container>
     </Navbar>
   </div>
