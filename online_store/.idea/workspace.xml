@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d2bc6dee-7990-4989-bb20-ca205264a81b" name="Changes" comment="Added addition items to cart.">
+    <list default="true" id="d2bc6dee-7990-4989-bb20-ca205264a81b" name="Changes" comment="Added removing.">
       <change beforePath="$PROJECT_DIR$/../front-end-pro" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end-pro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProductCard/ProductCard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductCard/ProductCard.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ProductCard/ProductCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductCard/ProductCard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/About/About.jsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Cart/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/Cart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home/Home.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Product/Product.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Product/Product.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Product/Product.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Product/Product.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Products/Products.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Products/Products.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Products/Products.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Products/Products.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +94,7 @@
       <updated>1667475103996</updated>
       <workItem from="1667475105241" duration="50420000" />
       <workItem from="1667997411695" duration="40000" />
-      <workItem from="1668505763361" duration="52933000" />
+      <workItem from="1668505763361" duration="64937000" />
     </task>
     <task id="LOCAL-00001" summary="Added first version.">
       <created>1668758529107</created>
@@ -192,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668790307927</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Added removing.">
+      <created>1668790934296</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1668790934296</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +238,7 @@
     <MESSAGE value="Added related products." />
     <MESSAGE value="Added counter." />
     <MESSAGE value="Added addition items to cart." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added addition items to cart." />
+    <MESSAGE value="Added removing." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added removing." />
   </component>
 </project>

@@ -21,27 +21,35 @@ const Header = () => {
   return <div>
     <Navbar bg="#2b2b2b" expand="lg">
     <Container>
-      <Navbar.Brand href="products"> <Link className='logo' to={'/products'}>
+      <Navbar.Brand href="products"> <Link className='logo' to={'/'}>
         <i className="bi bi-unity logo-header"></i>
       </Link>{' '}
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
-          <Nav.Link href="products">Home</Nav.Link>
+          <Nav.Link as={Link} to='/'>Home</Nav.Link>
           <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-            <NavDropdown.Item href="products">All Products</NavDropdown.Item>
-            <NavDropdown.Item href="smartphones">
-              Smartphones
+            <NavDropdown.Item>
+              <Nav.Link as={Link} to='/'>
+                All Products
+              </Nav.Link>
             </NavDropdown.Item>
             <NavDropdown.Divider />
-            <NavDropdown.Item href="laptops">
-              Laptops
+            <NavDropdown.Item>
+              <Nav.Link as={Link} to='/smartphones'>
+                Smartphones
+              </Nav.Link>
+            </NavDropdown.Item>
+            <NavDropdown.Item>
+              <Nav.Link as={Link} to='/laptops'>
+                Laptops
+              </Nav.Link>
             </NavDropdown.Item>
           </NavDropdown>
         </Nav>
       </Navbar.Collapse>
-      <Link to={'/cart'}>
+      <Link className='cart-link' to='/cart'>
         {getTotalQuantity()}
         <i className="bi bi-cart-check"></i>
       </Link>

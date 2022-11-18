@@ -23,7 +23,7 @@ const Product = () => {
   </div>
 
   return (
-    <div>
+    <div className='product-background'>
       <Header/>
       <h1 className="background-products">Product<i className="bi bi-unity"></i></h1>
       { isLoading ? spinner : (
@@ -34,16 +34,12 @@ const Product = () => {
               <h1 className='product-title'>{product?.title}</h1>
             </div>
             <div className='product_description'>{product?.description}</div>
-            <div>{rating(product)}</div>
+            <div className='product-stars'>{rating(product)}</div>
             <div className='product-price-body'>
               <div className='product-price'>${product?.price}</div>
               <div className='product-discount'>${getPriceWithDiscount(product?.price, product?.discountPercentage)}</div>
               <div>
-                <Button
-                  className='product-button'
-                  variant="primary"
-                  onClick={() => dispatch(addToCart(product))}
-                >Add to cart</Button>
+                <Button variant="outline-danger" onClick={() => dispatch(addToCart(product))}>Add to cart</Button>{' '}
               </div>
             </div>
           </div>

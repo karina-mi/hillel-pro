@@ -10,7 +10,6 @@ import {useGetProductsQuery} from '../../services/shop'
 
 const Products = ({title, query}) => {
   const {data, isLoading} = query()
-
   const spinner = <div className="louder-product">
     <Spinner className="spinner_border" animation="border" variant="danger"/>
   </div>
@@ -20,7 +19,7 @@ const Products = ({title, query}) => {
       <Header/>
       <h1 className="background-products">{title}<i className="bi bi-unity"></i></h1>
       {isLoading ? spinner : (
-        <div className="row-products">
+        <div className="row-products products-row">
           {data?.map(product => {
             return (
               <ProductCard product={product} key={product.id}/>

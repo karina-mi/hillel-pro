@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom'
 import {rating, getPriceWithDiscount} from '../common'
 import {useDispatch} from 'react-redux'
 import {addToCart, removeItem} from '../../redux/cartSlice'
+import Button from 'react-bootstrap/Button';
 
 const ProductCard = ({product, removable = false}) => {
   const dispatch = useDispatch()
@@ -24,15 +25,16 @@ const ProductCard = ({product, removable = false}) => {
         <div className='card-body-price'>`
           <div className='price_product'>
             <div className='text-muted'>${product?.price}</div>
-            <div className='price-product'>${getPriceWithDiscount(product?.price, product?.discountPercentage)}</div>
-            {product.quantity && <div style={{color: 'white'}}>Quantity: {product.quantity}</div>}
+            <div className='price-product'>${getPriceWithDiscount(product?.price, product?.discountPercentage)}
+              {product.quantity && <div style={{color: 'red'}}>{product.quantity}</div>}
+            </div>
           </div>
           <div>
-            <button type="button" className="btn btn-primary"
-            onClick={() => dispatch(addToCart(product))}>Add to cart</button>
+
+            <Button variant="outline-danger" onClick={() => dispatch(addToCart(product))}>Add to cart</Button>{' '}
           </div>
-          {removable && <button type="button" className="btn btn-primary"
-                                onClick={() => dispatch(removeItem(product.id))}>Remove</button>}
+          {removable && <button type="button" className="btn btn-primary btn-background"
+                                onClick={() => dispatch(removeItem(product.id))}><i className="bi bi-x-square"></i></button>}
         </div>
       </Card.Body>
      </div>

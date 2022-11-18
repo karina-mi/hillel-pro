@@ -15,15 +15,21 @@
     cursor: pointer;
     color: red;
     font-size: 23px;
-    border: #c31d1df5 1px solid;
-    padding: 1px 10px;
-    border-radius: 14px;
+    margin-left: 5px;
+}
+
+.cart-link {
+    text-decoration: none;
+    color: red;
+}
+
+.cart-link:hover {
+    color: white;
+
 }
 
 .bi-cart-check:hover {
     color: white;
-    border: white 1px solid;
-
 }
 
 .navbar-nav .nav-link {

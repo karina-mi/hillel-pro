@@ -30,22 +30,18 @@
 .price-product {
     color: #ffffff;
     font-size: 18px;
-}
-.price_product {
-    display: flex;
-    align-items: baseline;
-    gap: 7px;
+    gap: 41px;
 }
 
 .card-body-price {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 15px 10px;
     border: 1px solid #000000;
     border-radius: 0 0 10px 10px;
     margin-top: 5px;
     height: 90px;
+    justify-content: space-around;
 }
 .text-muted {
     text-decoration: line-through;
@@ -76,4 +72,28 @@
     -webkit-box-shadow: 20px 20px 8px -4px rgb(0 0 0);
     border-radius: 10px;
 }
+
+.btn-primary {
+    background: none !important;
+
+}
+.btn-background {
+    border: none!important;
+}
+
+.bi-x-square {
+    margin-bottom: 41px;
+    color: red;
+    font-size: 20px;
+}
+
+.bi-x-square:hover {
+    color: white;
+}
+
+.bi-check-circle-fill {
+    color: #1abd25;
+}
+
+
 

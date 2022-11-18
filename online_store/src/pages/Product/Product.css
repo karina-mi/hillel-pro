@@ -3,6 +3,13 @@
     font-size: 13px;
 }
 
+.product-stars {
+    width: 85px;
+}
+
+.product-background {
+    background: #2b2b2b;
+}
 .product-img {
     border-radius: 10px;
     margin-left: 50px;

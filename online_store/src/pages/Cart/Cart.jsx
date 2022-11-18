@@ -2,8 +2,8 @@ import React, {useEffect, useState} from 'react'
 import Header from '../../components/Header/Header'
 import ProductCard from '../../components/ProductCard/ProductCard'
 import Footer from '../../components/Footer/Footer'
-import Spinner from 'react-bootstrap/Spinner'
 import {useSelector} from 'react-redux'
+import './Cart.css'
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart.items)
@@ -20,7 +20,6 @@ const Cart = () => {
             )
           })}
         </div>
-      )}
       <Footer/>
     </div>
   )
