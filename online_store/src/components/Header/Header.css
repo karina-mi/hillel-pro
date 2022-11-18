@@ -1,9 +1,13 @@
 .logo-header {
-    font-size: 30px;
-    color: #ff000052;
+    font-size: 40px;
+    color:  #ff0000a1;
+    margin-right: 10px;
+    text-decoration: none;
+    cursor: pointer;
 }
-.header-logo {
-    padding: 15px 105px;
+
+.logo-header:hover {
+    color: white;
 }
 
 .bi-cart-check {
@@ -20,7 +24,10 @@
     color: white;
     border: white 1px solid;
 
-
-
 }
+
+.navbar-nav .nav-link {
+    color: red;
+}
+
 
