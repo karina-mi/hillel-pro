@@ -15,7 +15,6 @@ const Product = () => {
   const {id} = useParams()
   const {data: product, isLoading} = useGetProductQuery(id)
   const {data: related} = useGetRelatedProductsQuery({id: product?.id, category: product?.category})
-
   const dispatch = useDispatch()
 
   const spinner = <div className='louder-product'>

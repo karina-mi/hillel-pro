@@ -12,7 +12,7 @@ const Cart = () => {
     <div className='products'>
       <Header/>
       <h1 className="background-products">Cart<i className="bi bi-unity"></i></h1>
-        <div className='row-products'>
+        <div className='row-products' style={{height: '73vh'}}>
           {cart.length !== 0 ? cart?.map(product => {
             return (
               <ProductCard product={product} key={product.id} removable={true}/>
