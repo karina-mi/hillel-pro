@@ -15,8 +15,19 @@ const cartSlice = createSlice({
           console.error('ITEM IS NOT AVAILABLE ANYMORE')
         }
       } else {
-        state.items.push({ ...action.payload, quantity: 1 });
+        state.items.push({...action.payload, quantity: 1});
       }
+
+      fetch('https://dummyjson.com/carts/1', {
+        method: 'PUT', /* or PATCH */
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          products: state.items.map(item => Object({
+            id: item.id,
+            quantity: item.quantity,
+          }))
+        })
+      })
     },
     removeItem: (state, action) => {
       state.items = state.items.filter((item) => item.id !== action.payload);
