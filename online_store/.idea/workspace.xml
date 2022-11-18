@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d2bc6dee-7990-4989-bb20-ca205264a81b" name="Changes" comment="Fixed bugs.">
+    <list default="true" id="d2bc6dee-7990-4989-bb20-ca205264a81b" name="Changes" comment="Removed skip.">
       <change beforePath="$PROJECT_DIR$/../front-end-pro" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end-pro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Products/Products.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Products/Products.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Cart/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/Cart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Products/Products.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Products/Products.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +84,7 @@
       <updated>1667475103996</updated>
       <workItem from="1667475105241" duration="50420000" />
       <workItem from="1667997411695" duration="40000" />
-      <workItem from="1668505763361" duration="65668000" />
+      <workItem from="1668505763361" duration="66166000" />
     </task>
     <task id="LOCAL-00001" summary="Added first version.">
       <created>1668758529107</created>
@@ -212,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668808874979</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Removed skip.">
+      <created>1668809462942</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1668809462942</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,6 +251,7 @@
     <MESSAGE value="Added addition items to cart." />
     <MESSAGE value="Added removing." />
     <MESSAGE value="Fixed bugs." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bugs." />
+    <MESSAGE value="Removed skip." />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed skip." />
   </component>
 </project>

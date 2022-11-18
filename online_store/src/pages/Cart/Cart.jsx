@@ -7,18 +7,17 @@ import './Cart.css'
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart.items)
-
+  console.log(cart)
   return (
     <div className='products'>
       <Header/>
       <h1 className="background-products">Cart<i className="bi bi-unity"></i></h1>
         <div className='row-products'>
-          {cart?.map(product => {
-            console.log(product)
+          {cart.length !== 0 ? cart?.map(product => {
             return (
               <ProductCard product={product} key={product.id} removable={true}/>
             )
-          })}
+          }) : <div style={{color: 'white'}}>No items</div>}
         </div>
       <Footer/>
     </div>
