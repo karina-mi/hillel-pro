@@ -11,7 +11,7 @@ const ProductCard = ({product, removable = false}) => {
   const dispatch = useDispatch()
 
   return (
-    <div className='product-card'>
+    <div className='product-card' style={{height: '355px'}}>
       <Link to={`/product/${product.id}`}>
         <img className='img-products' variant="top" src={product?.thumbnail}/>
       </Link>

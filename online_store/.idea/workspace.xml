@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d2bc6dee-7990-4989-bb20-ca205264a81b" name="Changes" comment="Added markup.">
-      <change beforePath="$PROJECT_DIR$/../front-end-pro" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end-pro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/cartSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/cartSlice.js" afterDir="false" />
-    </list>
+    <list default="true" id="d2bc6dee-7990-4989-bb20-ca205264a81b" name="Changes" comment="`Added cart update.`" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,19 +34,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/karinamiheenko/Desktop/hillel-pro/online_store/src/pages/Products",
-    "list.type.of.created.stylesheet": "CSS",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/karinamiheenko/Desktop/hillel-pro/online_store/src/pages/Products&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/pages/Products" />
@@ -83,7 +79,9 @@
       <updated>1667475103996</updated>
       <workItem from="1667475105241" duration="50420000" />
       <workItem from="1667997411695" duration="40000" />
-      <workItem from="1668505763361" duration="66822000" />
+      <workItem from="1668505763361" duration="69374000" />
+      <workItem from="1668935842767" duration="598000" />
+      <workItem from="1668952530497" duration="2768000" />
     </task>
     <task id="LOCAL-00001" summary="Added first version.">
       <created>1668758529107</created>
@@ -232,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668810156044</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Added cart update.">
+      <created>1668810716476</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1668810716476</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,6 +271,7 @@
     <MESSAGE value="Fixed bugs." />
     <MESSAGE value="Removed skip." />
     <MESSAGE value="Added markup." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added markup." />
+    <MESSAGE value="Added cart update." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added cart update." />
   </component>
 </project>
